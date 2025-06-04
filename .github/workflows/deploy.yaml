@@ -11,3 +11,11 @@ jobs:
         run: ls
       - name: "Segundo Step"
         run: echo "hola fifi"
+  second_job:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: "primer Step"
+      run: echo "tik tok"
+    - name: "segundo Step"
+      run: df 
