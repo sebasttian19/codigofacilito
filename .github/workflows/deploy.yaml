@@ -12,7 +12,7 @@ jobs:
       - name: "Primer Step"
         run: ls
       - name: "Segundo Step"
-        run: echo "hola $perro y $gato"
+        run: echo "hola $Perro y $Gato"
 
   second_job:
     needs: first_job #Run Job sequentially , default run in parallel Jobs
