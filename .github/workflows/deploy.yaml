@@ -10,9 +10,12 @@ jobs:
       Gato: Luna
     steps:  
       - name: "Primer Step"
-        run: ls
+        id: step_1
+        run: echo "VARIABLE=chuchis" >> $GITHUB_OUTPUT
       - name: "Segundo Step"
-        run: echo "hola $Perro y $Gato"
+        run: echo "hola $Perro y $Gato ${{steps.step_1.outputs.VARIABLE}}" #Use context a level Steps
+      - name: "Third Step"
+        run:  
 
   second_job:
     needs: first_job #Run Job sequentially , default run in parallel Jobs
