@@ -11,9 +11,11 @@ jobs:
         run: ls
       - name: "Segundo Step"
         run: echo "hola fifi"
+
   second_job:
     needs: first_job #Run Job sequentially , default run in parallel Jobs
     runs-on: ubuntu-latest
+    if: ${{github.ref == 'refs/heads/main'}} ## Run if Job run in case that context be branch main
     
     steps:
     - name: "primer Step"
