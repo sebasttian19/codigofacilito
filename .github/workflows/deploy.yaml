@@ -12,6 +12,7 @@ jobs:
       - name: "Segundo Step"
         run: echo "hola fifi"
   second_job:
+    needs: first_job #Run Job sequentially , default run in parallel Jobs
     runs-on: ubuntu-latest
     
     steps:
