@@ -6,8 +6,8 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     env:
-      - Perro: Arya
-      - Gato: Luna
+      Perro: Arya
+      Gato: Luna
     steps:  
       - name: "Primer Step"
         run: ls
