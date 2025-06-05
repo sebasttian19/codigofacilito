@@ -11,7 +11,7 @@ jobs:
     steps:  
       - name: "Primer Step"
         id: step_1
-        run: echo "VARIABLE=chuchis" >> $GITHUB_OUTPUT
+        run: echo "VARIABLE=chuchis" # >> $GITHUB_OUTPUT
       - name: "Segundo Step"
         run: echo "hola $Perro y $Gato ${{steps.step_1.outputs.VARIABLE }}" #Use context a level Steps
 
